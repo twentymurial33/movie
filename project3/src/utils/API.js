@@ -1,10 +1,13 @@
-import axios from "axios";
+
+import axios from 'axios';
+import API from './utils/API';
+
 
 module.exports = (search, cb) => {
 
-	let api_key = '285f362a4f6cc63f443be8ae75b7438d';
+	let api_key = 'b44e5692';
 
-    let api_url = 'https://api.themoviedb.org/3/movie/550?api_key=${api_key}&s=${search}'
+    let api_url = `http://omdbapi.com?apikey=${api_key}&s=${search}`
 
     axios.get(api_url, {
 
@@ -24,10 +27,4 @@ module.exports = (search, cb) => {
 
 }
 
-export default {
- 
-//   getMovie: function() {
-//     return axios.get("/api/movies");
-//   }
-
-};
+export default API;
