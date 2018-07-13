@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
 import movieList from './components/movieList';
 import movieItem from './components/movieItem';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 // import API from './utils/API/';
 import './App.css';
 
@@ -44,10 +46,11 @@ class App extends Component {
     // });
 
   }
- 
+
   render() {
     return (
          <div className="App">
+
         <header className="App-header">
         <h1 className="App-title">Netflix meets Amazon</h1>
         </header>
@@ -55,9 +58,9 @@ class App extends Component {
           <input value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
         </form>
-  
+
         <movieList items={this.state.items} />
-        
+
       </div>
     );
   }
@@ -65,4 +68,3 @@ class App extends Component {
 
 
 export default App;
-
