@@ -19,12 +19,9 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-		this.loadMovie();
-	}
 
-	loadMovie = () => {
-		API.getMovie()
+	searchForMovie = (search) => {
+		API.getMovie(search)
 			.then(response => this.setState({ movies: response.data }))
 			.catch(err => console.log(err));
 	};
@@ -36,6 +33,9 @@ class App extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
+
+    this.searchForMovie(this.state.movie_id);
+
     this.setState({
       movie_id: '' 
     });
@@ -62,7 +62,7 @@ class App extends Component {
 
         <movieList items={this.state.items} />
         <Route path="/" exact component={HomePage}/>
-  <Route path="/login" exact component={LoginPage}/>
+      <Route path="/login" exact component={LoginPage}/>
 
       </div>
     );

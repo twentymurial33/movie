@@ -8,7 +8,7 @@ const apiBaseUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}
 
 export default {
 	getMovie: function(search) {
-		return axios.get(`${apiBaseUrl}&s=${search}`);
+		return axios.get(`${apiBaseUrl}&query=${search}`);
 	  }
 };
 
