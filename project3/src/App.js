@@ -3,6 +3,8 @@ import movieList from './components/movieList';
 import movieItem from './components/movieItem';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import HomePage from './pages/Login/HomePage';
+import LoginPage from './pages/Login/LoginPage';
 // import API from './utils/API/';
 import './App.css';
 
