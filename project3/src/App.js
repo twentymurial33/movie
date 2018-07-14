@@ -2,8 +2,8 @@ import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
 import movieList from './components/movieList';
 // import movieItem from './components/movieItem';
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar.js";
+import Footer from "./components/Footer/Footer.js";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
@@ -15,6 +15,11 @@ class App extends Component {
     super(props);
     this.state = {
       movie_id: '',
+<<<<<<< HEAD
+=======
+      searchResults: undefined,
+
+>>>>>>> a86ee8bc921840006c2daa3a1da021d40003c696
       moives: []
     };
   }
@@ -37,7 +42,12 @@ class App extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
+<<<<<<< HEAD
       movie_id: '' 
+=======
+      movie_id: ''
+
+>>>>>>> a86ee8bc921840006c2daa3a1da021d40003c696
     });
   }
 
@@ -73,7 +83,7 @@ class App extends Component {
   render() {
     return (
          <div className="App">
-
+         <Navbar />
         <header className="App-header">
         <h1 className="App-title">Netflix meets Amazon</h1>
         </header>
@@ -85,6 +95,7 @@ class App extends Component {
         <movieList items={this.state.items} />
         <Route path="/" exact component={HomePage}/>
   <Route path="/login" exact component={LoginPage}/>
+
       </div>
     );
   }
