@@ -15,11 +15,6 @@ class App extends Component {
     super(props);
     this.state = {
       movie_id: '',
-<<<<<<< HEAD
-=======
-      searchResults: undefined,
-
->>>>>>> a86ee8bc921840006c2daa3a1da021d40003c696
       moives: []
     };
   }
@@ -42,12 +37,7 @@ class App extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
-<<<<<<< HEAD
       movie_id: '' 
-=======
-      movie_id: ''
-
->>>>>>> a86ee8bc921840006c2daa3a1da021d40003c696
     });
   }
 
@@ -56,29 +46,7 @@ class App extends Component {
       movieInput: movieInput
     })
 
-
-    // API.getMoive(id)
-    // .then(res => {
-    //   this.setState({
-    //     movie_id: ""
-    //   })
-    //   this.loadMoives()
-    // })
-    // .catch(e => {
-    //   console.log(e);
-    // })
-}
-
-    // API(movieInput, (res) => {
-    //   if(res.Search){
-    //     this.setState({
-    //       searchResults: res.Search
-
-    //     })
-
-    //   }
-
-    // });
+  }
 
   render() {
     return (
@@ -98,7 +66,7 @@ class App extends Component {
 
       </div>
     );
-  }
+  };
 }
 
 
