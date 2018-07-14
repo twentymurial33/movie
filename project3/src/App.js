@@ -1,10 +1,12 @@
 import React,{ Component } from 'react';
+import {Route} from 'react-router-dom';
 import movieList from './components/movieList';
-import movieItem from './components/movieItem';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import movieItem from './components/movieItem';
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
+import LoginForm from './pages/Login/LoginForm';
 // import API from './utils/API/';
 import './App.css';
 
@@ -62,7 +64,8 @@ class App extends Component {
         </form>
 
         <movieList items={this.state.items} />
-
+        <Route path="/" exact component={HomePage}/>
+  <Route path="/login" exact component={LoginPage}/>
       </div>
     );
   }
