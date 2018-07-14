@@ -14,22 +14,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movieInput: '',
+      movie_id: '',
       searchResults: undefined,
-      term: '',
-      items: []
+      
+      moives: []
     };
   }
 
   onChange = (event) => {
-    this.setState({ term: event.target.value });
+    this.setState({ movie_id: event.target.value });
   }
 
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      term: '',
-      items: [...this.state.items, this.state.term]
+      movie_id: ''
+      
     });
   }
 
@@ -59,7 +59,7 @@ class App extends Component {
         <h1 className="App-title">Netflix meets Amazon</h1>
         </header>
         <form className="App" onSubmit={this.onSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
+          <input value={this.state.movie_id} onChange={this.onChange} />
           <button>Submit</button>
         </form>
 
