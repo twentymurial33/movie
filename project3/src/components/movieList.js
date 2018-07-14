@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import MovieItem from './movieItem';
+import movieItem from './movieItem';
 
-export default class Home extends Component {
+export default class movieList extends Component {
 
   render() {
 
@@ -21,7 +21,7 @@ export default class Home extends Component {
 
 						    return (
 
-						    	<MovieItem
+						    	<movieItem
 
 						    		key={index}
 
@@ -43,7 +43,7 @@ export default class Home extends Component {
 
 				)
 
-			} else if (movieInput.length == 0) {
+			} else if (movieInput.length === 0) {
 
 				return (
 
@@ -76,3 +76,4 @@ export default class Home extends Component {
   	}
 
 };
+

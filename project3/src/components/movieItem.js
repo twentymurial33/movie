@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import MovieItem from './movieItem';
+import movieList from './movieList';
 
 
 
-export default class Home extends Component {
+export default class movieItem extends Component {
 
   	render() {
 
