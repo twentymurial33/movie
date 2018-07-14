@@ -14,7 +14,7 @@ const Navbar = () => (
                <div class="row">
                  <div class="input-field col s6">
                    <i class="material-icons prefix">search</i>
-                   <input  placeholder="Search" value="" id="first_name2" type="text" class="validate"/>
+                   <input  placeholder="Search" value="" id="search-bar" type="text" class="validate"/>
                  </div>
                </div>
              </form>

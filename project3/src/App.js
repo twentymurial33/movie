@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
 import movieList from './components/movieList';
 // import movieItem from './components/movieItem';
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar.js";
 // import Footer from "./components/Footer";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       movie_id: '',
       searchResults: undefined,
-      
+
       moives: []
     };
   }
@@ -29,7 +29,7 @@ class App extends Component {
     event.preventDefault();
     this.setState({
       movie_id: ''
-      
+
     });
   }
 
@@ -54,7 +54,7 @@ class App extends Component {
   render() {
     return (
          <div className="App">
-
+         <Navbar />
         <header className="App-header">
         <h1 className="App-title">Netflix meets Amazon</h1>
         </header>
