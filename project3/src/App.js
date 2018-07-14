@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom';
 import movieList from './components/movieList';
 // import movieItem from './components/movieItem';
 import Navbar from "./components/Navbar/Navbar.js";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer.js";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
@@ -66,6 +66,7 @@ class App extends Component {
         <movieList items={this.state.items} />
         <Route path="/" exact component={HomePage}/>
   <Route path="/login" exact component={LoginPage}/>
+
       </div>
     );
   }
