@@ -7,7 +7,7 @@ import movieList from './components/movieList';
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
-// import API from './utils/API/';
+import API from './utils/API';
 import './App.css';
 
 class App extends Component {
@@ -15,21 +15,29 @@ class App extends Component {
     super(props);
     this.state = {
       movie_id: '',
-      searchResults: undefined,
-      
       moives: []
     };
   }
+
+  componentDidMount() {
+		this.loadMovie();
+	}
+
+	loadMovie = () => {
+		API.getMovie()
+			.then(response => this.setState({ movies: response.data }))
+			.catch(err => console.log(err));
+	};
 
   onChange = (event) => {
     this.setState({ movie_id: event.target.value });
   }
 
+
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      movie_id: ''
-      
+      movie_id: '' 
     });
   }
 
@@ -37,6 +45,19 @@ class App extends Component {
     this.setState({
       movieInput: movieInput
     })
+
+
+    // API.getMoive(id)
+    // .then(res => {
+    //   this.setState({
+    //     movie_id: ""
+    //   })
+    //   this.loadMoives()
+    // })
+    // .catch(e => {
+    //   console.log(e);
+    // })
+}
 
     // API(movieInput, (res) => {
     //   if(res.Search){
@@ -48,8 +69,6 @@ class App extends Component {
     //   }
 
     // });
-
-  }
 
   render() {
     return (

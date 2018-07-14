@@ -1,30 +1,34 @@
 
 import axios from 'axios';
-import API from './utils/API';
 
 
-module.exports = (search, cb) => {
+const api_key = '285f362a4f6cc63f443be8ae75b7438d';
 
-	let api_key = '285f362a4f6cc63f443be8ae75b7438d';
+const apiBaseUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}`;
 
-    let api_url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&s=${search}`
+// module.exports = (search, cb) => {
 
-    axios.get(api_url, {
+export default {
+	getMovie: function(search) {
+		return axios.get(`${apiBaseUrl}&s=${search}`);
+	  }
 
-		headers: {
+    // axios.get(api_url, {
 
-			'content-type': 'application/json',
+	// 	headers: {
 
-			'accept': 'application/json'
+	// 		'content-type': 'application/json',
 
-		}
+	// 		'accept': 'application/json'
 
-    }).then((results) => {
+	// 	}
 
-    	cb(results.data)
+    // }).then((results) => {
 
-    });
+    // 	cb(results.data)
 
-}
+    // });
 
-export default API;
+};
+
+// export default API;
