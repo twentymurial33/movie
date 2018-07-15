@@ -1,10 +1,10 @@
 import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
-import movieList from './components/movieList';
-// import movieItem from './components/movieItem';
 import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import MovieCard from "./components/MovieCard/MovieCard.js";
+import Thumbnail from "./components/Thumbnail/Thumbnail.js";
+import { MovieList, MovieItem } from "./components/MovieList";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
@@ -61,7 +61,7 @@ class App extends Component {
           <button>Submit</button>
         </form>
 
-        <MovieCard />
+
 
 
         <movieList items={this.state.items} />
