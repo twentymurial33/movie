@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import MovieCard from "./components/MovieCard/MovieCard.js";
 import Thumbnail from "./components/Thumbnail/Thumbnail.js";
+import EmailPassword from "./components/EmailPassword/EmailPassword.js";
 import { MovieList, MovieItem } from "./components/MovieList";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
@@ -61,13 +62,11 @@ class App extends Component {
           <button>Submit</button>
         </form>
 
-
-
-
         <movieList items={this.state.items} />
         <Route path="/" exact component={HomePage}/>
       <Route path="/login" exact component={LoginPage}/>
 
+      <Footer />
       </div>
     );
   };

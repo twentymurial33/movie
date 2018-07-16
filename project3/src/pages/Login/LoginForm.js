@@ -35,10 +35,10 @@ render(){
         <LoginForm onSubmit={this.onSubmit}>
             <LoginForm.Field>
                 <label htmlFor="email"></label>
-                <input 
-                type="email" 
-                id="email" 
-                name="email" 
+                <input
+                type="email"
+                id="email"
+                name="email"
                 placeholder="example@example.com"
                 value={data.email}
                 onChange={this.onChange}
@@ -46,10 +46,10 @@ render(){
                 </LoginForm.Field>
                 <LoginForm.Field>
                 <label htmlFor="password"></label>
-                <input 
-                type="password" 
-                id="password" 
-                name="password" 
+                <input
+                type="password"
+                id="password"
+                name="password"
                 placeholder="make it secure"
                 value={data.password}
                 onChange={this.onChange}

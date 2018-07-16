@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+// import MovieCard from "../components/MovieCard/MovieCard.js";
 
 const HomePage=()=>(
     <div>
         <h1>HomePage</h1>
         <Link to="/login">Login</Link>
-        </div>
+    </div>
 );
 
 export default HomePage;
