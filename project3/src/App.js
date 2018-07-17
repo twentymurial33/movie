@@ -58,24 +58,17 @@ class App extends Component {
     console.log(this.state.movies)
     return (
          <div className="App">
-         <Navbar 
-        
-          
-          />
+         <Navbar />
         <header className="App-header">
         </header>
 
-<<<<<<< HEAD
                  <form className="App" onSubmit={this.onSubmit}>
                   <input value={this.state.movie_id} onChange={this.onChange} />
                   <button>Submit</button>
                   </form>
-      
-        
-=======
+
         <Searchbar />
 
->>>>>>> daf1209cdb3c6e9df0791a99146e1535e7673206
         <MovieCard>
         <h1>Render Movies Here</h1>
         <MovieList>
