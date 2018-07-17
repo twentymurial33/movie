@@ -23,7 +23,7 @@ class App extends Component {
 
 	searchForMovie = (search) => {
 		API.getMovie(search)
-			.then(response => this.setState({ movies: response.data }))
+			.then(response => this.setState({ movies: response.data.results }))
 			.catch(err => console.log(err));
 	};
 
@@ -54,11 +54,21 @@ class App extends Component {
 
 
   render() {
+    console.log(this.state.movies)
     return (
          <div className="App">
-         <Navbar />
+         <Navbar 
+        
+          
+          />
         <header className="App-header">
         </header>
+
+                 <form className="App" onSubmit={this.onSubmit}>
+                  <input value={this.state.movie_id} onChange={this.onChange} />
+                  <button>Submit</button>
+                  </form>
+      
         
         <MovieCard>
         <h1>Render Movies Here</h1>
