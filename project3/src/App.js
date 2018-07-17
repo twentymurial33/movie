@@ -17,10 +17,9 @@ class App extends Component {
     super(props);
     this.state = {
       movie_id: '',
-      moives: []
+      movies: []
     };
   }
-
 
 	searchForMovie = (search) => {
 		API.getMovie(search)
@@ -50,6 +49,10 @@ class App extends Component {
 
   }
 
+ 
+
+
+
   render() {
     return (
          <div className="App">
@@ -62,7 +65,20 @@ class App extends Component {
           <button>Submit</button>
         </form>
 
-        <movieList items={this.state.items} />
+        <MovieCard>
+        <h1>Render Movies Here</h1>
+        <MovieList>
+      
+      {this.state.movies.map(movies => {
+        return <movieItem {...movies} />;
+       })}
+      </MovieList>
+      </MovieCard>
+
+      
+      
+
+        
         <Route path="/" exact component={HomePage}/>
       <Route path="/login" exact component={LoginPage}/>
 
