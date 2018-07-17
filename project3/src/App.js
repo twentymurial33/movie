@@ -59,15 +59,16 @@ class App extends Component {
          <Navbar />
         <header className="App-header">
         </header>
+        
         <MovieCard>
         <h1>Render Movies Here</h1>
         <MovieList>
-      
-      {this.state.movies.map(movies => {
-        return <movieItem {...movies} />;
+      {this.state.movies.map(movie => {
+        return <MovieItem key={movie.id} {...movie} />;
        })}
       </MovieList>
       </MovieCard>
+
       {/* <Route path="/" exact component={HomePage}/> */}
       {/* <Route path="/login" exact component={LoginPage}/> */}
        
