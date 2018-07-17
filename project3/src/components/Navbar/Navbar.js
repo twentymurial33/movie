@@ -15,6 +15,7 @@ const Navbar = () => (
 
              <div class="row">
                <div class="input-field col s6">
+               <i class="material-icons prefix cyan-text text-accent-2">search</i>
                  <input id="search" type="text" class="validate" />
                  <label for="search">Search</label>
                </div>
