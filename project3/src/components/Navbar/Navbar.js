@@ -9,16 +9,19 @@ const Navbar = () => (
        <Link to="/" class="brand-logo center cyan-text text-accent-2">Netflix Meets Amazon</Link>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li>
-           <div class="row">
-             <form class="col s12">
-               <div class="row">
-                 <div class="input-field col s6">
-                   <i class="material-icons prefix cyan-text text-accent-2">search</i>
-                   <input  placeholder="Search" value="" id="search-bar" type="text" class="validate"/>
-                 </div>
+
+         <div class="row">
+           <form class="col s12">
+
+             <div class="row">
+               <div class="input-field col s6">
+                 <input id="search" type="text" class="validate" />
+                 <label for="search">Search</label>
                </div>
-             </form>
-           </div>
+             </div>
+           </form>
+          </div>
+
          </li>
          <li><Link to="/login">Login</Link></li>
        </ul>
