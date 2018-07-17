@@ -1,7 +1,6 @@
 import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar.js";
-import Footer from "./components/Footer/Footer.js";
 import MovieCard from "./components/MovieCard/MovieCard.js";
 import Thumbnail from "./components/Thumbnail/Thumbnail.js";
 import EmailPassword from "./components/EmailPassword/EmailPassword.js";
@@ -10,7 +9,8 @@ import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
 import API from './utils/API';
-import './App.css';
+import Footer from "./components/Footer/Footer.js";
+// import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -58,12 +58,12 @@ class App extends Component {
          <div className="App">
          <Navbar />
         <header className="App-header">
-        <h1 className="App-title">Netflix meets Amazon</h1>
+        {/* <h1 className="App-title">Netflix meets Amazon</h1> */}
         </header>
-        <form className="App" onSubmit={this.onSubmit}>
+        {/* <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.movie_id} onChange={this.onChange} />
           <button>Submit</button>
-        </form>
+        </form> */}
 
         <MovieCard>
         <h1>Render Movies Here</h1>
@@ -74,14 +74,8 @@ class App extends Component {
        })}
       </MovieList>
       </MovieCard>
-
-      
-      
-
-        
-        <Route path="/" exact component={HomePage}/>
+      <Route path="/" exact component={HomePage}/>
       <Route path="/login" exact component={LoginPage}/>
-
       <Footer />
       </div>
     );
