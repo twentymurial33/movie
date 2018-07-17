@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar.js";
 import MovieCard from "./components/MovieCard/MovieCard.js";
 import Thumbnail from "./components/Thumbnail/Thumbnail.js";
+import Searchbar from "./components/Searchbar/Searchbar.js"
 import EmailPassword from "./components/EmailPassword/EmailPassword.js";
 import { MovieList, MovieItem } from "./components/MovieList";
 import HomePage from './pages/Login/HomePage';
@@ -49,7 +50,7 @@ class App extends Component {
 
   }
 
- 
+
 
 
 
@@ -64,12 +65,17 @@ class App extends Component {
         <header className="App-header">
         </header>
 
+<<<<<<< HEAD
                  <form className="App" onSubmit={this.onSubmit}>
                   <input value={this.state.movie_id} onChange={this.onChange} />
                   <button>Submit</button>
                   </form>
       
         
+=======
+        <Searchbar />
+
+>>>>>>> daf1209cdb3c6e9df0791a99146e1535e7673206
         <MovieCard>
         <h1>Render Movies Here</h1>
         <MovieList>
@@ -81,7 +87,7 @@ class App extends Component {
 
       {/* <Route path="/" exact component={HomePage}/> */}
       {/* <Route path="/login" exact component={LoginPage}/> */}
-       
+
       <Footer />
       </div>
     );
