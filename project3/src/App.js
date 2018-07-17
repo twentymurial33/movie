@@ -58,13 +58,7 @@ class App extends Component {
          <div className="App">
          <Navbar />
         <header className="App-header">
-        {/* <h1 className="App-title">Netflix meets Amazon</h1> */}
         </header>
-        {/* <form className="App" onSubmit={this.onSubmit}>
-          <input value={this.state.movie_id} onChange={this.onChange} />
-          <button>Submit</button>
-        </form> */}
-
         <MovieCard>
         <h1>Render Movies Here</h1>
         <MovieList>
@@ -74,13 +68,12 @@ class App extends Component {
        })}
       </MovieList>
       </MovieCard>
-      <Route path="/" exact component={HomePage}/>
+      {/* <Route path="/" exact component={HomePage}/> */}
       <Route path="/login" exact component={LoginPage}/>
+       
       <Footer />
       </div>
     );
   };
 }
-
-
 export default App;

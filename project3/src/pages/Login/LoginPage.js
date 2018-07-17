@@ -1,15 +1,13 @@
-// import React from 'react';
-// import "./LoginPage.css";
-// import LoginForm from "./LoginForm.js"
-// // import Navbar from "./components/Navbar/Navbar.js";
-// // // import "LoginForm";
-//
-//
-// const LoginPage=()=>(
-//     <div>
-//         <h1>Login page</h1>
-//         { /*<LoginForm/>*/ }
-//        </div>
-// );
-//
-// export default LoginPage;
+import React from 'react';
+import {Link} from 'react-router-dom';
+import './LoginPage.css';
+// import MovieCard from "../components/MovieCard/MovieCard.js";
+
+const LoginPage=()=>(
+    <div>
+        {/* <h1>LoginPage</h1>
+        <Link to="/login">Login</Link> */}
+    </div>
+);
+
+export default LoginPage;

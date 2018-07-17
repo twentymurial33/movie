@@ -53,7 +53,7 @@ class API extends React.Component{
 	
 		}
 			return (
-		  <div>
+		  <div className="API">
 			  <label>Movies</label>
 <br></br>
 
