@@ -69,7 +69,7 @@ class App extends Component {
       </MovieList>
       </MovieCard>
       {/* <Route path="/" exact component={HomePage}/> */}
-      <Route path="/login" exact component={LoginPage}/>
+      {/* <Route path="/login" exact component={LoginPage}/> */}
        
       <Footer />
       </div>
