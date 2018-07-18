@@ -60,23 +60,30 @@ class App extends Component {
          <div className="App">
          <Navbar />
         <header className="App-header">
-        </header>
+        </header> 
 
-                 <form className="App" onSubmit={this.onSubmit}>
-                  <input value={this.state.movie_id} onChange={this.onChange} />
-                  <button>Submit</button>
-                  </form>
+        <Searchbar
+          runSearch={this.searchForMovie}
 
-        <Searchbar />
+        />
 
-        <MovieCard>
+        {/* <MovieCard> */}
         <h1>Render Movies Here</h1>
-        <MovieList>
-      {this.state.movies.map(movie => {
-        return <MovieItem key={movie.id} {...movie} />;
-       })}
-      </MovieList>
-      </MovieCard>
+        {/* <MovieList> */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap'
+          }}
+        >
+          {this.state.movies.map(movie => {
+            return <MovieCard 
+              thumbnail={movie.poster_path}
+            />;
+          })}
+       </div>
+      {/* </MovieList>
+      </MovieCard> */}
 
       {/* <Route path="/" exact component={HomePage}/> */}
       {/* <Route path="/login" exact component={LoginPage}/> */}

@@ -4,8 +4,7 @@ import Thumbnail from "../Thumbnail";
 
 const MovieCard = props => (
 
-  <div class="row">
-    <div class="col m3">
+    <div class="col m3" style={{flex: 1, flexBasis: '20%'}}>
       <div class="card">
         <div class="card-image">
         <Thumbnail src={props.thumbnail} />
@@ -24,38 +23,6 @@ const MovieCard = props => (
         </div>
       </div>
     </div>
-    <div class="col m3">
-      <div class="card">
-        <div class="card-image">
-          {/* <img src="images/sample-1.jpg" /> */}
-          {/* <span class="card-title">Card Title</span> */}
-         </div>
-         <div class="card-content">
-        </div>
-      </div>
-    </div>
-    <div class="col m3">
-      <div class="card">
-        <div class="card-image">
-          {/* <img src="images/sample-1.jpg" /> */}
-          {/* <span class="card-title">Card Title</span> */}
-         </div>
-         <div class="card-content">
-        </div>
-      </div>
-    </div>
-    <div class="col m3">
-      <div class="card">
-        <div class="card-image">
-          {/* <img src="images/sample-1.jpg" /> */}
-          {/* <span class="card-title">Card Title</span> */}
-         </div>
-         <div class="card-content">
-        </div>
-      </div>
-    </div>
-    </div>
-    
 
 );
 
