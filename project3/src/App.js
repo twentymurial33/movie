@@ -67,9 +67,7 @@ class App extends Component {
 
         />
 
-        {/* <MovieCard> */}
-        <h1>Render Movies Here</h1>
-        {/* <MovieList> */}
+      
         <div
           style={{
             display: 'flex',
@@ -82,8 +80,7 @@ class App extends Component {
             />;
           })}
        </div>
-      {/* </MovieList>
-      </MovieCard> */}
+    
 
       {/* <Route path="/" exact component={HomePage}/> */}
       {/* <Route path="/login" exact component={LoginPage}/> */}
