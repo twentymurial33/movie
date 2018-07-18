@@ -1,12 +1,46 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router';
+import EmailPassword from "../../components/EmailPassword/EmailPassword.js";
+import MovieCard from "../../components/MovieCard/MovieCard.js";
+import Searchbar from "../../components/Searchbar/Searchbar.js"
 // import MovieCard from "../components/MovieCard/MovieCard.js";
+import API from '../../utils/API';
 
-const HomePage=()=>(
-    <div>
+class HomePage extends React.Component {
+  state = {
+    movies: []
+  }
+
+  searchForMovie = (search) => {
+		API.getMovie(search)
+			.then(response => this.setState({ movies: response.data.results }))
+			.catch(err => console.log(err));
+	};
+
+  render() {
+    return <div>
         {/* <h1>HomePage</h1> */}
         {/* <Link to="/login">Login</Link> */}
-    </div>
-);
+        <Searchbar
+          runSearch={this.searchForMovie}
+        />
 
-export default HomePage;
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap'
+          }}
+        >
+          {this.state.movies.map(movie => {
+            return <MovieCard
+              thumbnail={movie.poster_path}
+            />;
+          })}
+       </div>
+    </div>
+  }
+}
+
+
+export default withRouter(HomePage);

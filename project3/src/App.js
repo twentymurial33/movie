@@ -2,8 +2,8 @@ import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar.js";
 import MovieCard from "./components/MovieCard/MovieCard.js";
-import Thumbnail from "./components/Thumbnail/Thumbnail.js";
 import Searchbar from "./components/Searchbar/Searchbar.js"
+import Thumbnail from "./components/Thumbnail/Thumbnail.js";
 import EmailPassword from "./components/EmailPassword/EmailPassword.js";
 import { MovieList, MovieItem } from "./components/MovieList";
 import HomePage from './pages/Login/HomePage';
@@ -43,13 +43,6 @@ class App extends Component {
     });
   }
 
-  searchMovie(movieInput){
-    this.setState({
-      movieInput: movieInput
-    })
-
-  }
-
 
 
 
@@ -60,30 +53,13 @@ class App extends Component {
          <div className="App">
          <Navbar />
         <header className="App-header">
-        </header> 
+        </header>
 
-        <Searchbar
-          runSearch={this.searchForMovie}
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
 
-        />
-
-      
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap'
-          }}
-        >
-          {this.state.movies.map(movie => {
-            return <MovieCard 
-              thumbnail={movie.poster_path}
-            />;
-          })}
-       </div>
-    
-
-      {/* <Route path="/" exact component={HomePage}/> */}
-      {/* <Route path="/login" exact component={LoginPage}/> */}
+      <Route path="/login" exact component={LoginPage}/>
 
       <Footer />
       </div>
