@@ -16,11 +16,9 @@ const MovieCard = props => (
             
             href={props.href}
           >
-         
-            Go to Movie!sadsad
           </a>
 
-          <Link to={`/movie/${props.movieId}`}>Lmfao</Link>
+          <Link to={`/movie/${props.movieId}`}>More Info!</Link>
          </div>
          <div class="card-content">
         </div>
