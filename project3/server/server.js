@@ -1,20 +1,17 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
-var app = express();
-var sequelize=require("sequelize");
-var PORT = process.env.PORT || 3000;
-app.use(express.static("./public"));
+import express from "express";
+import morgan from "morgan";
+import mongoose from "mongoose";
+import router from "./router";
+
+mongoose.connect("mongodb://localhost/movies");
 
 
-app.get("/", function(req, res) {
+const app=express();
 
-  res.sendFile(path.join(__dirname + "./public/index.html"));
+app.use(morgan("combined"));
+app.use("/v1",router);
 
-});
-
-app.listen(PORT, function() {
-
-  console.log("App listening on PORT: " + PORT);
-
+const server=app.listen(3000,()=>{
+  const{address,port}=server.address();
+    console.log("Listening on PORT!");
 });

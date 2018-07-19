@@ -1,25 +1,15 @@
-'use strict';
+import mongoose,{Schema} from "mongoose";
 
-module.exports = function(sequelize, DataTypes) {
+var movieSchema=new Schema({
+  title:{
+    type:String,
+    unique:true,
+  },
+poster:String,
+genre:String,
+days:Array,
+times:Array,
 
-  var Movie = sequelize.define('MovieList', {
+});
 
-    name: DataTypes.STRING,
-
-    message: DataTypes.STRING
-
-  }, {
-
-    classMethods: {
-
-      associate: function(models) {
-
-      }
-
-    }
-
-  });
-
-  return Movie;
-
-};
+export default mongoose.model("Movie",movieSchema);
