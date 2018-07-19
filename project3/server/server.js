@@ -2,11 +2,11 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var app = express();
-var mongoose=require("mongoose");
+var sequelize=require("sequelize");
 var PORT = process.env.PORT || 3000;
 app.use(express.static("./public"));
 
-mongoose.connect("mongodb://localhost/movies",{useMongoClient:true});
+
 app.get("/", function(req, res) {
 
   res.sendFile(path.join(__dirname + "./public/index.html"));

@@ -1,50 +1,34 @@
 var express = require('express');
-
 var path = require('path');
-
-
-
 var router = express.Router();
-
-
-
 var models = require('./../models');
 
-models.sequelize.sync();
+sequelize.connect(url, function (err, db) {
+	if (err) {
+	  console.log('Unable to connect to the mongoDB server. Error:', err);
+	} else {
+	  console.log('Connection established to', url);
+	}
+   });
 
-
-
-router.get('/', function(req,res){
-
-	res.sendFile(path.join(__dirname, '../../client/public/index.html'));
-
-});
-
-
-
-router.get('/api/messages', (req,res) => {
-
-
-	models.Guestbook.findAll({order: [
-
-            ['id', 'ASC']
-
-    	]}).then(function(messages){
-
-			res.json(messages);
-
-	});
-
-});
-
-
-
-router.get('*', (req,res) => {
-
-	res.sendFile(path.join(__dirname, '../../client/public/index.html'));
-
-});
-
-
-
+   app.get('/', function(req, res) {
+	res.json('you did it');
+  });
+  
+  //get list of the Favorite Movies//
+  app.get('/api/MovieList', function(req, res) {
+	MovieList.find({}).then(eachOne => {
+	  res.json(eachOne);
+	  })
+	})
+ 
+	app.post('/api/MovieList', function(req, res) {
+		MovieList.create({
+		//   guestSignature: req.body.SignatureOfGuest,
+		//   message: req.body.MessageofGuest,
+		}).then(signature => {
+		  res.json(signature)
+		});
+	  });
+	
 module.exports = router;
