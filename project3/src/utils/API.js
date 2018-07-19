@@ -11,7 +11,7 @@ export default {
 	  },
 
 	getPopularMovies: function(load) {
-		return axios.get(`${apiBaseUrl}&certification_country=US&certification.lte=G&sort_by=popularity.desc`);
+		return axios.get(`${apiBaseUrl}&certification_country=US&certification.lte=G&sort_by=popularity.desc&query=a`);
 	}
 };
 

@@ -46,6 +46,7 @@ class HomePage extends React.Component {
         >
           {this.state.movies.map(movie => {
             return <MovieCard
+              movieId={movie.id}
               thumbnail={movie.poster_path}
             />;
           })}

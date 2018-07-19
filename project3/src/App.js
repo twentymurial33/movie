@@ -47,9 +47,6 @@ class App extends Component {
   }
 
 
-
-
-
   render() {
     
     return (
@@ -58,12 +55,9 @@ class App extends Component {
         <header className="App-header">
         </header>
 
-      <Route path="/" exact>
-        <HomePage />
-      </Route>
-
+      <Route path="/" exact component={HomePage} />
       <Route path="/login" exact component={LoginPage}/>
-      <Route path="/MovieInfo/:movie_id" exact component={MovieInfo} />
+      <Route path="/movie/:movieId" exact component={MovieInfo} />
 
        
 
