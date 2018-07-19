@@ -12,6 +12,17 @@ class HomePage extends React.Component {
     movies: []
   }
 
+  componentDidMount() {
+    this.loadPopularMovies();
+  }
+  
+  loadPopularMovies = (load) => {
+    API.getPopularMovies(load)
+    .then(response => this.setState({ movies: response.data.results }))
+    .catch(err => console.log(err));
+  };
+
+
   searchForMovie = (search) => {
 		API.getMovie(search)
 			.then(response => this.setState({ movies: response.data.results }))
@@ -19,6 +30,7 @@ class HomePage extends React.Component {
 	};
 
   render() {
+    console.log(this.state.movies)
     return <div>
         {/* <h1>HomePage</h1> */}
         {/* <Link to="/login">Login</Link> */}

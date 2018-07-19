@@ -11,13 +11,14 @@ const MovieCard = props => (
           <h3>{props.title}</h3>
           <a
             rel="noreferrer noopener"
-            target="_blank"
+            target="_blank "
+            
             href={props.href}
           >
+         
             Go to Movie!
           </a>
-          {/* <img src="images/sample-1.jpg" /> */}
-          {/* <span class="card-title">Card Title</span> */}
+        
          </div>
          <div class="card-content">
         </div>

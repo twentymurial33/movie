@@ -11,6 +11,7 @@ import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
 import API from './utils/API';
 import Footer from "./components/Footer/Footer.js";
+import MovieInfo from "./pages/MovieInfo/MovieInfo";
 // import './App.css';
 
 class App extends Component {
@@ -21,6 +22,8 @@ class App extends Component {
       movies: []
     };
   }
+
+
 
 	searchForMovie = (search) => {
 		API.getMovie(search)
@@ -48,7 +51,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.movies)
+    
     return (
          <div className="App">
          <Navbar />
@@ -60,6 +63,9 @@ class App extends Component {
       </Route>
 
       <Route path="/login" exact component={LoginPage}/>
+      <Route path="/MovieInfo/:movie_id" exact component={MovieInfo} />
+
+       
 
       <Footer />
       </div>

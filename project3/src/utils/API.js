@@ -8,7 +8,11 @@ const apiBaseUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}
 export default {
 	getMovie: function(search) {
 		return axios.get(`${apiBaseUrl}&query=${search}`);
-	  }
+	  },
+
+	getPopularMovies: function(load) {
+		return axios.get(`${apiBaseUrl}&certification_country=US&certification.lte=G&sort_by=popularity.desc`);
+	}
 };
 
 
