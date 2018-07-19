@@ -11,7 +11,8 @@ export default {
 	  },
 
 	getPopularMovies: function(load) {
-		return axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}` + "&language=en-US" + "&certification_country=US&certification.lte=G&sort_by=popularity.desc");
+		// return axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}` + "&language=en-US" + "&certification_country=US&certification.lte=G&sort_by=popularity.acen");
+		return axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}` + "&language=en-US" + "&page=1");
 	}
 };
 
