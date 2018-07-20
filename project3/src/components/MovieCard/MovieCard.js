@@ -19,7 +19,7 @@ const MovieCard = props => (
           </a>
 
           <Link to={`/movie/${props.movieId}`}>More Info!</Link>
-          <span onClick={()=> {
+          <button onClick={()=> {
             fetch(`/favorite`, {
               method: 'post',
               body: JSON.stringify({id: props.movieId}),
@@ -31,7 +31,7 @@ const MovieCard = props => (
           .then((results) => {
               console.log(results)
           });
-          }}>Add To Favorites</span>
+          }}>Add To Favorites</button>
          </div>
          <div class="card-content">
         </div>

@@ -1,8 +1,5 @@
-import express,{Router} from "express";
-import {index}from "./controllers/movies";
-
-const router=Router();
-
+var express = require("express");
+// var router = express.router();
 console.log("sup")
 
 router.route("/movies.json").get(index);
@@ -12,4 +9,4 @@ router.post('/favorite', (req,res)=> {
     res.json({res: req.body})
 })
 
-export default router;
+module.exports = router;
