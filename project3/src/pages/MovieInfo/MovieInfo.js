@@ -44,11 +44,11 @@ class MovieInfo extends React.Component {
 	</article>
 
     <div>
-       
+
     </div>
 
         </div>
-      
+
   };
 }
 

@@ -16,7 +16,8 @@ const Footer = () => (
              <div class="col l4 offset-l2 s12">
                <ul>
                  <li><Link to="/" class="cyan-text text-accent-2">Home</Link></li>
-                 <li><Link to="/" class="cyan-text text-accent-2">Login</Link></li>
+                 <li><Link to="/login" class="cyan-text text-accent-2">Login</Link></li>
+                 <li><Link to="/favorites" class="cyan-text text-accent-2">Favorites</Link></li>
                </ul>
              </div>
            </div>

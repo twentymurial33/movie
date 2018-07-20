@@ -12,7 +12,8 @@ import LoginForm from './pages/Login/LoginForm';
 import API from './utils/API';
 import Footer from "./components/Footer/Footer.js";
 import MovieInfo from "./pages/MovieInfo/MovieInfo";
-// import './App.css';
+import Favorites from "./pages/Favorites/Favorites"
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -48,21 +49,22 @@ class App extends Component {
 
 
   render() {
-    
+
     return (
          <div className="App">
          <Navbar />
         <header className="App-header">
         </header>
 
+
       <Route path="/" exact component={HomePage} />
       <Route path="/login" exact component={LoginPage}/>
       <Route path="/movie/:movieId" exact component={MovieInfo} />
+      <Route path="/favorites" exact component={Favorites} />
 
-       
-
-      <Footer />
+      <Footer style={{position: 'absolute', bottom: 0}}/>
       </div>
+
     );
   };
 }

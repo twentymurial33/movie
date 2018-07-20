@@ -4,7 +4,7 @@ import {withRouter} from 'react-router';
 import EmailPassword from "../../components/EmailPassword/EmailPassword.js";
 import MovieCard from "../../components/MovieCard/MovieCard.js";
 import Searchbar from "../../components/Searchbar/Searchbar.js"
-// import MovieCard from "../components/MovieCard/MovieCard.js";
+import Footer from "../../components/Footer/Footer.js"
 import API from '../../utils/API';
 
 class HomePage extends React.Component {
@@ -15,7 +15,7 @@ class HomePage extends React.Component {
   componentDidMount() {
     this.loadPopularMovies();
   }
-  
+
   loadPopularMovies = (load) => {
     API.getPopularMovies(load)
     .then(response => this.setState({ movies: response.data.results }))

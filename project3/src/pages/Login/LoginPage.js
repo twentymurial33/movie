@@ -2,12 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './LoginPage.css';
 // import MovieCard from "../components/MovieCard/MovieCard.js";
-// import EmailPassword from "..components/EmailPassword/EmailPassword.js";
+import EmailPassword from "../../components/EmailPassword/EmailPassword.js";
+import Footer from "../../components/Footer/Footer.js"
+
+
 const LoginPage=()=>(
     <div>
-        {/* <h1>LoginPage</h1>
-        <Link to="/login">Login</Link> */}
-
+        <EmailPassword/>
     </div>
 );
 
