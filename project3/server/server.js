@@ -1,15 +1,13 @@
-var express = require("express");
-var app = express();
-var morgan = require("morgan")
-var mongoose = require("mongoose")
-var router = require("./router")
+var express=require("express");
+var app=express();
+var bodyParser=require("body-Parser");
+var mongoose=require("mongoose");
 
+Movie=require("./models/Movie");
+User=require("./models/User");
+//connect to moongose
 mongoose.connect("mongodb://localhost/movie");
+var db=mongoose.connection;
 
-app.use(morgan("combined"));
-app.use("/v1",router);
-
-const server=app.listen(3000,()=>{
-  const{address,port}=server.address();
-    console.log("Listening on PORT!");
-});
+app.listen(5000);
+console.log("Listening on Port");

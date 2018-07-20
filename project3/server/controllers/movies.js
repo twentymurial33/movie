@@ -1,17 +1,13 @@
-import Movie from "./models/movie";
-import moment from "moment";
+var Movie = require('/models/movie');
 
-// const days=["Today"];
-
-// const times=[];
-
-export const index=(req,res,next)=>{
+var index=(req,res,next)=>{
 	Movie.find().lean().exec((err,movies)=>res.json(
 		{movies:movies.map(movie=>({
 			...movie,
-			// days,
-			// times,
+			
 		}))}
 		
 	));
 		}
+
+		console.log(Movie)

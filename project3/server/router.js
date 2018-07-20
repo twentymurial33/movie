@@ -1,12 +1,24 @@
 var express = require("express");
-// var router = express.router();
-console.log("sup")
 
-router.route("/movies.json").get(index);
+app.get('/',function(req,res){
+    res.send("Hello World!");
+});
 
-router.post('/favorite', (req,res)=> {
-    console.log(req.body)
-    res.json({res: req.body})
-})
+app.get("/api/Movie",function(req,res){
+   Movies.getMovies(function(err,genres){
+       if(err){
+           throw err;
+       }
+       res.json(Movies);
+   })
+});
 
-module.exports = router;
+app.get("/api/Users",function(req,res){
+    Users.getUsers(function(err,genres){
+        if(err){
+            throw err;
+        }
+        res.json(Users);
+    })
+ });
+
