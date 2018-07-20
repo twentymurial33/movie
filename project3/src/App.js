@@ -62,7 +62,7 @@ class App extends Component {
       <Route path="/movie/:movieId" exact component={MovieInfo} />
       <Route path="/favorites" exact component={Favorites} />
 
-      <Footer style={{position: 'absolute', bottom: 0}}/>
+      <Footer style={{position: 'fixed', bottom: 0}}/>
       </div>
 
     );

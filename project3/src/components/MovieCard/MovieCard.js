@@ -4,7 +4,7 @@ import "./MovieCard.css";
 import Thumbnail from "../Thumbnail";
 
 const MovieCard = props => (
-  
+
     <div class="col m3" style={{flex: 1, flexBasis: '20%'}}>
       <div class="card">
         <div class="card-image">
@@ -13,12 +13,22 @@ const MovieCard = props => (
           <a
             rel="noreferrer noopener"
             target="_blank "
-            
+
             href={props.href}
           >
           </a>
 
           <Link to={`/movie/${props.movieId}`}>More Info!</Link>
+
+          <form action="#">
+            <p>
+              <label>
+                <input type="checkbox" value="Favorite"/>
+                <span>Add to Favorites!</span>
+              </label>
+            </p>
+          </form>
+
          </div>
          <div class="card-content">
         </div>
