@@ -6,9 +6,8 @@ var movieSchema=new Schema({
     unique:true,
   },
 poster:String,
-genre:String,
-days:Array,
-times:Array,
+genre:String
+
 
 });
 
