@@ -14,14 +14,12 @@ class MovieInfo extends React.Component {
     movie: {}
   }
 
-  componentWillUnmount() {
-      console.log('WHAT THE FUCK')
-  }
 
   componentDidMount() {
-
-    API.getMovie(this.props.match.params.movieId)
+   
+    API.getMovieById(this.props.match.params.movieId) 
         .then(res => this.setState({ movie: res.data }))
+      
         .catch(err => console.log(err));
 }
 
@@ -29,7 +27,7 @@ class MovieInfo extends React.Component {
     return <div>
         <h1>
         {this.state.movie.original_title}
-        { this.props.match.params.movieId}
+        {/* { this.props.match.params.movieId} */}
 		</h1>
 
     <div>
