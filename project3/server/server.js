@@ -1,12 +1,10 @@
-import express from "express";
-import morgan from "morgan";
-import mongoose from "mongoose";
-import router from "./router";
+var express = require("express");
+var app = express();
+var morgan = require("morgan")
+var mongoose = require("mongoose")
+var router = require("./router")
 
-mongoose.connect("mongodb://localhost/movies");
-
-
-const app=express();
+mongoose.connect("mongodb://localhost/movie");
 
 app.use(morgan("combined"));
 app.use("/v1",router);
