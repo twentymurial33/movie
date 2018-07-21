@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 //app.use('/static',express.static(path.join(__dirname,'static')))
 app.use('/api', routes)
-var url = process.env.MONGODB_URI || "mongodb://johnsonnic222:DCBadgers22!!@ds147361.mlab.com:47361/heroku_8493vb2d"
+var url = process.env.MONGODB_URI || "mongodb://johnsonnic222:DCheroku22!!@ds147361.mlab.com:47361/heroku_8493vb2d"
 try {
     mongoose.connect(url, {
         // useNewUrlParser: true 
