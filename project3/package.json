@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "concurrently": "^3.6.0",
+    "proxy": "http://localhost:3001",
     "mongoose": "^5.2.4",
     "morgan": "^1.9.0",
     "react": "^16.4.1",
