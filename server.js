@@ -3,7 +3,7 @@ var express=require("express");
 var app=express();
 var bodyParser=require("body-parser");
 var mongoose=require("mongoose");
-var port = 5000 || process.env.PORT  
+var port = process.env.PORT || 5000
 var router = express.Router()
 app.use(bodyParser.json())
 app.get('/api/movies', (req, res) => {
