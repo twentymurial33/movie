@@ -8,9 +8,9 @@ var router = express.Router()
 app.use(bodyParser.json())
 app.get('/api/movies', (req, res) => {
     const customers = [
-      {id: 1, firstName: 'John', lastName: 'Doe'},
-      {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-      {id: 3, firstName: 'Mary', lastName: 'Swanson'},
+      {id: 1, title: 'Nicole', genre: 'Johnson'},
+      {id: 2, title: 'Nate', genre: 'Schubert'},
+      {id: 3, title: 'Murial', genre: 'Anindo'},
     ];
   
     res.json(customers);
