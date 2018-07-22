@@ -4,6 +4,8 @@ import {withRouter} from 'react-router';
 import EmailPassword from "../../components/EmailPassword/EmailPassword.js";
 import MovieCard from "../../components/MovieCard/MovieCard.js";
 import Searchbar from "../../components/Searchbar/Searchbar.js"
+import Footer from "../../components/Footer/Footer.js"
+
 // import Navbar from "./components/Navbar/Navbar.js";
 // import { Link } from "react-router-dom";
 // import MovieCard from "../components/MovieCard/MovieCard.js";
@@ -24,31 +26,35 @@ class MovieInfo extends React.Component {
 }
 
   render() {
-    return <div>
+    return  <div>
         <h1>
-        {this.state.movie.original_title}
-        {/* { this.props.match.params.movieId} */}
-		</h1>
+          {this.state.movie.original_title}
+          {/* { this.props.match.params.movieId} */}
+        </h1>
 
-    <div>
-        {this.state.movie.video}
-    </div>
+        <article>
+          <h3>Release Date:</h3>
+          <p>
+            {this.state.movie.release_date}
+            </p>
+		      <h3>Summary:</h3>
+			      <p>
+				      {this.state.movie.overview}
+			      </p>
+	      </article>
 
-    <article>
-		<h1>Summary:</h1>
-			<p>
-				{this.state.movie.overview}
-			</p>
-	</article>
-
-    <div>
-
-    </div>
-
-        </div>
+  </div> 
 
   };
+
 }
+
+
+
+
+  
+
+
 
 
 export default withRouter(MovieInfo);
