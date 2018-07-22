@@ -3,7 +3,7 @@ var express=require("express");
 var app=express();
 var bodyParser=require("body-parser");
 var mongoose=require("mongoose");
-var port = process.env.PORT || 5000  
+var port = 5000 || process.env.PORT  
 var router = express.Router()
 app.use(bodyParser.json())
 app.get('/api/movies', (req, res) => {
@@ -18,36 +18,36 @@ app.get('/api/movies', (req, res) => {
 
   var mongodb = require('mongodb');
 
-//We need to work with "MongoClient" interface in order to connect to a mongodb server.
-// var MongoClient = mongodb.MongoClient;
 
-// // Connection URL. This is where your mongodb server is running.
+var MongoClient = mongodb.MongoClient;
 
-// //(Focus on This Variable)
-// var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"     
-// //(Focus on This Variable)
+// Connection URL. This is where your mongodb server is running.
 
-// // Use connect method to connect to the Server
-//   MongoClient.connect(url, function (err, db) {
-//   if (err) {
-//     console.log('Unable to connect to the mongoDB server. Error:', err);
-//   } else {
-//     console.log('Connection established to', url);
+//(Focus on This Variable)
+var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"     
+//(Focus on This Variable)
 
-//     // do some work here with the database.
+// Use connect method to connect to the Server
+  MongoClient.connect(url, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    console.log('Connection established to', url);
 
-//     //Close connection
-//     db.close();
-//   }
-// });
-var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"
-try {
-    mongoose.connect(url, {
-      useNewUrlParser: true
-    })    
-} catch (error) {
+    // do some work here with the database.
+
+    //Close connection
+    db.close();
+  }
+});
+// var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"
+// try {
+//     mongoose.connect(url, {
+//       useNewUrlParser: true
+//     })    
+// } catch (error) {
     
-}
+// }
 
 app.listen(port, () => {
     console.log(`Server started at port: ${port}`);
