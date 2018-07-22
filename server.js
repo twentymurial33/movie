@@ -1,7 +1,7 @@
 var express=require("express");
 // var routes = require('./routes/');
 var app=express();
-var bodyParser=require("body-Parser");
+var bodyParser=require("body-parser");
 var mongoose=require("mongoose");
 var port = 5000 || process.env.PORT
 var router = express.Router()
