@@ -2,6 +2,7 @@
   "name": "project3",
   "version": "0.1.0",
   "private": true,
+  "main":"server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -24,7 +25,8 @@
     "validator": "^10.4.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "start":  "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "server": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
