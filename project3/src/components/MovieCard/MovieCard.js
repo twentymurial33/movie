@@ -20,14 +20,15 @@ const MovieCard = props => (
 
           <Link to={`/movie/${props.movieId}`}>More Info!</Link>
           <button onClick={()=> {
-            fetch(`/favorite`, {
+            fetch(`/api/favorite`, {
               method: 'post',
               body: JSON.stringify({id: props.movieId}),
               headers: {
                   'content-type': 'application/json',
                   'accept': 'application/json'
               },
-          }).then((response) => response.json())
+          })
+          .then((response) => response.json())
           .then((results) => {
               console.log(results)
           });

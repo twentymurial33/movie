@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema
 
-var movieSchema = new mongoose.Schema({
+var movieSchema = new Schema({
   title: String,
   poster: String,
   genre: String,
-  
+  movie_id: String
 })
 
-mongoose.model('Movie', movieSchema);
+module.exports = mongoose.model('Movie', movieSchema);
