@@ -55,3 +55,8 @@ app.post('/api/favorite', (req, res) => {
 app.listen(port, () => {
     console.log(`Server started at port: ${port}`);
 });
+
+// If no API routes are hit, send the React app
+router.use(function (req, res) {
+  res.sendFile(path.join(__dirname, "../src/build/index.html"));
+});
