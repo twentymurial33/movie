@@ -9,7 +9,7 @@ var port = process.env.PORT || 5000
 var router = express.Router();
 
 var Favorite = require("./server/models/Favorite.js");
-var Movie = require("./server/models/Movie.js");
+var Movie = require("./server/models/movie.js");
 
 var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"     
 
