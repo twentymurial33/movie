@@ -55,7 +55,7 @@ app.post('/api/favorite', (req, res) => {
 
 app.get('/', function (req, res) {
   res.send('<h1>heyy</h1>');
-  // res.sendFile(path.join(__dirname, "./src/build/index.html"));
+  res.sendFile(path.join(__dirname, "./build/index.html"));
 });
 
 app.listen(port, () => {
