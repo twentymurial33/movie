@@ -11,7 +11,7 @@ const Register=()=>(
     </div>
 );
 
-lass SignUpForm extends Component {
+class SignUpForm extends Component {
   constructor(props) {
     super(props);
   }
