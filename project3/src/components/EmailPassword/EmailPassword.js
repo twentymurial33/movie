@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 const EmailPassword = () => (
 
   <div class="row">
+    <h3>Login</h3>
     <form class="col s12">
 
       <div class="row">

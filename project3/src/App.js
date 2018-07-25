@@ -9,6 +9,7 @@ import { MovieList, MovieItem } from "./components/MovieList";
 import HomePage from './pages/Login/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import LoginForm from './pages/Login/LoginForm';
+import Register from './pages/Register/Register';
 import API from './utils/API';
 import Footer from "./components/Footer/Footer.js";
 import MovieInfo from "./pages/MovieInfo/MovieInfo";
@@ -61,6 +62,7 @@ class App extends Component {
       <Route path="/login" exact component={LoginPage}/>
       <Route path="/movie/:movieId" exact component={MovieInfo} />
       <Route path="/favorites" exact component={Favorites} />
+      <Route path="/register" exact component={Register} />
 
       <Footer style={{position: 'fixed', bottom: 0}}/>
       </div>
