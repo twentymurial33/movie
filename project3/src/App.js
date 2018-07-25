@@ -21,11 +21,30 @@ class App extends Component {
     super(props);
     this.state = {
       movie_id: '',
-      movies: []
+      movies: [],
+      authed: false,
+    loading: true
     };
   }
 
-
+  // componentDidMount () {
+  //   // this.removeListener = onAuthStateChanged((user) => {
+  //     if (user) {
+  //       this.setState({
+  //         authed: true,
+  //         loading: false,
+  //       })
+  //     else {
+  //       this.setState({
+  //         authed: false,
+  //         loading: false
+  //       })
+  //     }
+  //   }
+  
+  // // componentWillUnmount () {
+  // //   this.removeListener()
+  // // }
 
 	searchForMovie = (search) => {
 		API.getMovie(search)
@@ -67,7 +86,9 @@ class App extends Component {
       <Footer style={{position: 'fixed', bottom: 0}}/>
       </div>
 
-    );
-  };
+  );
+  }
+
 }
+
 export default App;
