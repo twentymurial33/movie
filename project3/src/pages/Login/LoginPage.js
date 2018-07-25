@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './LoginPage.css';
 // import MovieCard from "../components/MovieCard/MovieCard.js";
@@ -11,5 +12,6 @@ const LoginPage=()=>(
         <EmailPassword/>
     </div>
 );
+
 
 export default LoginPage;

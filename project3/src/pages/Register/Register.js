@@ -1,8 +1,7 @@
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import MovieCard from "../components/MovieCard/MovieCard.js";
 import EmailPassword from "../../components/EmailPassword/EmailPassword.js";
-import Footer from "../../components/Footer/Footer.js"
 
 
 const Register=()=>(
@@ -12,4 +11,34 @@ const Register=()=>(
     </div>
 );
 
+class SignUpForm extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  onSubmit = (event) => {
+
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.onSubmit}>
+
+      </form>
+    );
+  }
+}
+
+const SignUpLink = () =>
+  <p>
+    Need an account?
+    {''}
+    <Link to="/register">Register</Link>
+  </p>
+
 export default Register;
+
+export {
+  SignUpForm,
+  SignUpLink,
+};

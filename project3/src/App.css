@@ -22,7 +22,7 @@
   font-size: large;
 */
 
-.footer {
-  margin-top: 150px;
-  color: pink;
+body {
+  justify-content: center;
+  text-align: center;
 }
