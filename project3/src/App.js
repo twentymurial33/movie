@@ -15,6 +15,11 @@ import Footer from "./components/Footer/Footer.js";
 import MovieInfo from "./pages/MovieInfo/MovieInfo";
 import Favorites from "./pages/Favorites/Favorites"
 import './App.css';
+import { logout } from './helpers/auth';
+// import { firebaseAuth } from '../config/constants';
+import index from "./pages/Login/index";
+// import { firebaseAuth } from '../../../config/constants';
+
 
 class App extends Component {
   constructor(props) {
@@ -66,7 +71,7 @@ class App extends Component {
       movie_id: ''
     });
   }
-
+  
 
   render() {
 
