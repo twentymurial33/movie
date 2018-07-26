@@ -17,7 +17,8 @@ class Favorites extends React.Component {
       .then(res=>res.json())
       .then(movies=>this.setState({movies}))
 
-      fetch('/api/favorites').then((response) => response.json())
+      fetch('/api/favorites')
+      .then((response) => response.json())
       .then((results) => {
           this.setState({
             favorites: results
