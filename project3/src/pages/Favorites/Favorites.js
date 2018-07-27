@@ -45,12 +45,12 @@ class Favorites extends React.Component {
              <div class="col-lg-20">
              <h4>Movie Favorites</h4>
              <ul>
-        
-                 
+
+
 {
-  matches.length > 0 ?
-                   matches.map(movie =>
-                   <li key={movie.id}>{movie.title}{movie.genre}<img src={`http://image.tmdb.org/t/p/w185//${movie.poster}`}/></li>) :
+  favorites.length > 0 ?
+                   favorites.map(movie =>
+                   <li key={movie._id}>{movie.title}<img src={`http://image.tmdb.org/t/p/w185//${movie.thumbnail}`}/></li>) :
                    <li>No Favorites</li>
 }
 
@@ -58,10 +58,10 @@ class Favorites extends React.Component {
          </div>
       </div>
 </div>
-</div>  
+</div>
       )
   }
-  
+
 }
 // const Favorites=()=>(
 // <div className="container ">
