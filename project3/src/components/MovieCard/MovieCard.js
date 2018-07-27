@@ -22,7 +22,7 @@ const MovieCard = props => (
           <button onClick={()=> {
             fetch(`/api/favorite`, {
               method: 'post',
-              body: JSON.stringify({id: props.movieId}),
+              body: JSON.stringify({id:props.movieId,href:props.href,title:props.title,thumbnail:props.thumbnail}),
               headers: {
                   'content-type': 'application/json',
                   'accept': 'application/json'

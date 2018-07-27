@@ -14,7 +14,7 @@ var Movie = require("./server/models/movie.js");
 
 // var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie" 
 // var MongoClient=require("mongodb").MongoClient;
-var MONGODB_URL="mongodb://test:test@ds119660.mlab.com:19660/movie";
+var MONGODB_URL="mongodb://test1:Murial22@ds119660.mlab.com:19660/movie";
 
 
 
@@ -52,7 +52,8 @@ app.get("/api/getPopularMovies", (req, res) => {
 })
 
 app.post('/api/favorite', (req, res) => {
-  Favorite.create({movie_id: req.body.id, amount: 1}).then((newFav) => {
+  Favorite.create(req.body).then((newFav) => {
+    
     res.json(newFav)
   })
 })

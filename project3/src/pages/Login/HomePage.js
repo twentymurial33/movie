@@ -48,6 +48,8 @@ class HomePage extends React.Component {
             return <MovieCard
               movieId={movie.id}
               thumbnail={movie.poster_path}
+              title={movie.title}
+              href={movie.href}
             />;
           })}
        </div>
