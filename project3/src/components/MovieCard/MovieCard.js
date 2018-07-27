@@ -5,7 +5,7 @@ import Thumbnail from "../Thumbnail";
 
 const MovieCard = props => (
 
-    <div class="col m3" style={{flex: 1, flexBasis: '20%'}}>
+    <div class="col m3 " style={{flex: 1, flexBasis: '20%'}}>
       <div class="card">
         <div class="card-image">
         <Thumbnail src={props.thumbnail} />
@@ -34,8 +34,8 @@ const MovieCard = props => (
           });
           }}>Add To Favorites</button>
          </div>
-         <div class="card-content">
-        </div>
+         {/*<div class="card-content">
+        </div>*/}
       </div>
     </div>
 

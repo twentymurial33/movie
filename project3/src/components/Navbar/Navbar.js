@@ -5,8 +5,8 @@ import "./Navbar.css";
 const Navbar = () => (
 
   <nav>
-     <div class="nav-wrapper grey darken-1">
-       <Link to="/" class="brand-logo center cyan-text text-accent-2">Netflix Meets Amazon</Link>
+     <div class="nav-wrapper grey darken-4 border">
+       <Link to="/" class="brand-logo center cyan-text text-accent-2">ChilList</Link>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li>
 

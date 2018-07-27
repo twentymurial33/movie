@@ -12,7 +12,7 @@ function setErrorMsg(error) {
       loginMessage: error
     }
   }
-  
+
   export default class Login extends Component {
     state = { loginMessage: null }
     handleSubmit = (e) => {
@@ -32,12 +32,12 @@ function setErrorMsg(error) {
         <div className="col-sm-6 col-sm-offset-3">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label>Email</label>
-              <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
+              <label for="email">Email</label>
+              <input className="form-control" ref={(email) => this.email = email}/>
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
+              <input type="password" className="form-control" ref={(pw) => this.pw = pw} />
             </div>
             {
               this.state.loginMessage &&
@@ -53,4 +53,3 @@ function setErrorMsg(error) {
       )
     }
   }
-

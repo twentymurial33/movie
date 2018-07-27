@@ -46,7 +46,7 @@ class App extends Component {
   //       })
   //     }
   //   }
-  
+
   // // componentWillUnmount () {
   // //   this.removeListener()
   // // }
@@ -71,15 +71,15 @@ class App extends Component {
       movie_id: ''
     });
   }
-  
+
 
   render() {
 
     return (
          <div className="App">
          <Navbar />
-        <header className="App-header">
-        </header>
+        {/*<header className="App-header">
+        </header>*/}
 
 
       <Route path="/" exact component={HomePage} />

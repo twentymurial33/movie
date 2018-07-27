@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 
 const Footer = () => (
 
-  <footer class="page-footer grey darken-1 ">
+  <footer class="page-footer grey darken-4">
 
          <div class="container ">
            <div class="row">
 
              <div class="col l6 s12">
-               <h5 class="cyan-text text-accent-2">Netflix Meets Amazon</h5>
+               <h5 class="cyan-text text-accent-2">ChiList</h5>
                <p class="cyan-text text-accent-2">Search Movies. Find Your Favorites. Chill.</p>
              </div>
              <div class="col l4 offset-l2 s12">
