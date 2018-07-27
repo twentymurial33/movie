@@ -13,7 +13,7 @@ var Favorite = require("./server/models/Favorite.js");
 var Movie = require("./server/models/movie.js");
 
 // var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie" 
-var MongoClient=require("mongodb").MongoClient;
+// var MongoClient=require("mongodb").MongoClient;
 var MONGODB_URL="mongodb://test:test@ds119660.mlab.com:19660/movie";
 
 

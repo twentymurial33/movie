@@ -11,6 +11,7 @@
     "install": "cd project3 && npm install",
     "build": "cd project3 && npm run build",
     "run": "node scripts/build.js",
+    "deploy": "now --public",
     "heroku-postbuild": "npm run build"
   },
   "engines": {
