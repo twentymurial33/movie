@@ -12,9 +12,13 @@ var router = express.Router();
 var Favorite = require("./server/models/Favorite.js");
 var Movie = require("./server/models/movie.js");
 
-var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie"     
+// var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie" 
+var MongoClient=require("mongodb").MongoClient;
+var MONGODB_URL="mongodb://test:test@ds119660.mlab.com:19660/movie";
 
-mongoose.connect(url, function (err, db) {
+
+
+mongoose.connect(MONGODB_URL, function (err, db) {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
