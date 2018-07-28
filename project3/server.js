@@ -14,12 +14,12 @@ var Movie = require("./server/models/movie.js");
 
 // var url = process.env.MONGODB_URI || "mongodb://localhost:27017/movie" 
 // var MongoClient=require("mongodb").MongoClient;
-var MONGODB_URL="mongodb://Test4:test1984@ds257981.mlab.com:57981/heroku_plrrf1j6";
+var MONGODB_URI="mongodb://Test4:test1984@ds257981.mlab.com:57981/heroku_plrrf1j6";
 // var MONGODB_URL="mongodb://test1:Murial22@ds119660.mlab.com:19660/movie";
 
 
 
-mongoose.connect(MONGODB_URL, function (err, db) {
+mongoose.connect(MONGODB_URI, function (err, db) {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
