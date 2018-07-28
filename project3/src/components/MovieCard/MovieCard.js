@@ -9,7 +9,7 @@ const MovieCard = props => (
       <div class="card">
         <div class="card-image">
         <Thumbnail src={props.thumbnail} />
-          <h3>{props.title}</h3>
+          {/* <h3>{props.title}</h3> */}
           <a
             rel="noreferrer noopener"
             target="_blank "
