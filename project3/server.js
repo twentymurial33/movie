@@ -59,15 +59,15 @@ app.post('/api/favorite', (req, res) => {
   })
 })
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "./build/index.html"));
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, "./build/index.html"));
+// });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("project3/build"));
- } else {
-  app.use(express.static("public"));
- }
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("project3/build"));
+//  } else {
+//   app.use(express.static("public"));
+//  }
 
 app.listen(port, () => {
     console.log(`Server started at port: ${port}`);
